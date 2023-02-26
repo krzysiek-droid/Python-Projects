@@ -177,6 +177,13 @@ for i in range(len(dfLB))[skipped_data:]:
     else:
         bear_concordant = True
 
+    if time == datetime(2023, 2, 26, 12, 25):
+        print(f"{dfLB['close'][:i].tolist()[-2:]}")
+        print(f"{variables_dict['ibtm_y'][-2:]}")
+        print(cross_under(dfLB['close'][:i].tolist(), variables_dict['ibtm_y']))
+        print(variables_dict['ibtm_cross'])
+        print(variables_dict['btm_y'][-1] != variables_dict['ibtm_y'][-1])
+        print(bear_concordant)
     # --------------------------------------------------------------------------------------
     # Detect internal bearish structure
     if cross_under(dfLB['close'][:i].tolist(), variables_dict['ibtm_y']) and \

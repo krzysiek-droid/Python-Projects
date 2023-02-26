@@ -71,13 +71,13 @@ def ob_coord(use_max: bool, n_bar, loc: int, order_block_df: pd.DataFrame,
 
 
 def cross_over(source1, source2):
-    if source1[-1] > source2[-1] and source1[-2] < source2[-2]:
+    if source1[-1] > source2[-1] and source1[-2] <= source2[-2]:
         return True
     return False
 
 
 def cross_under(source1, source2):
-    if source1[-1] < source2[-1] and source1[-2] > source2[-2]:
+    if source1[-1] < source2[-1] and source1[-2] >= source2[-2]:
         return True
     return False
 
